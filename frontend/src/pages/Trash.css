@@ -1,0 +1,289 @@
+.trash-page-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.trash-main-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.trash-header-bar {
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--bg-card);
+}
+
+.trash-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-back-link {
+  background: transparent;
+  color: var(--primary);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.btn-back-link:hover {
+  text-decoration: underline;
+}
+
+.trash-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trash-title-group h2 {
+  font-size: 1.5rem;
+}
+
+.trash-count-pill {
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.trash-bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-restore-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-size: 0.88rem;
+}
+
+.btn-restore-all:hover {
+  background: rgba(16, 185, 129, 0.22);
+}
+
+.btn-empty-trash {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  font-size: 0.88rem;
+}
+
+.btn-empty-trash:hover {
+  background: rgba(239, 68, 68, 0.22);
+}
+
+/* Trash List Cards */
+.trash-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trash-card {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--bg-card);
+}
+
+.trash-card-info {
+  flex: 1;
+}
+
+.trash-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.trash-card-desc {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.trash-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.trash-category-pill {
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.deleted-date-pill {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.trash-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-restore-single {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--success-bg);
+  color: var(--success);
+  font-size: 0.82rem;
+}
+
+.btn-restore-single:hover {
+  background: rgba(16, 185, 129, 0.22);
+}
+
+.btn-delete-forever {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  color: var(--danger);
+  font-size: 0.82rem;
+}
+
+.btn-delete-forever:hover {
+  background: var(--danger-bg);
+}
+
+/* Empty Trash State */
+.empty-trash-card {
+  padding: 60px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-card);
+}
+
+.empty-trash-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.empty-trash-card h3 {
+  font-size: 1.35rem;
+}
+
+.empty-trash-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 420px;
+}
+
+/* Confirm Dialog */
+.confirm-dialog {
+  max-width: 440px;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.confirm-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--danger-bg);
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.confirm-actions button {
+  flex: 1;
+}
+
+.btn-danger-confirm {
+  padding: 11px 20px;
+  border-radius: var(--radius-md);
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.btn-danger-confirm:hover {
+  background: var(--danger-hover);
+}
+
+@media (max-width: 700px) {
+  .trash-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .trash-bulk-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .trash-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .trash-card-actions {
+    justify-content: flex-end;
+  }
+}
